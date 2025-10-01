@@ -1,0 +1,174 @@
+/* style.css */
+
+/* 1. Selector Element */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9; /* Warna latar belakang hijau muda */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2e7d32; /* Hijau tua */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+h2 {
+    color: #1b5e20; /* Hijau lebih gelap */
+    border-bottom: 2px solid #a5d6a7;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #388e3c; /* Hijau sedang */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #2e7d32; /* Hijau tua */
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+/* 2. Selector ID */
+#nama-lengkap-profil {
+    font-size: 2.8em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* 3. Selector Class */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.profil-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.foto-area {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.foto-profil {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 6px solid #66bb6a; /* Border warna hijau */
+    border-radius: 50%; /* Membuat foto menjadi lingkaran */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto-profil:hover {
+    transform: scale(1.08) rotate(3deg);
+}
+
+.biodata-area {
+    flex: 1;
+    min-width: 280px;
+}
+
+.kontak-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.link-sosial {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #c8e6c9; /* Latar belakang hijau muda */
+    color: #1b5e20; /* Teks hijau gelap */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Agar padding dan margin bekerja dengan baik */
+    margin: 5px; /* Jarak antar link sosial */
+}
+
+.link-sosial i {
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+}
+
+.link-sosial:hover {
+    background-color: #a5d6a7;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+    .profil-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    .foto-area {
+        margin-bottom: 25px;
+    }
+    #nama-lengkap-profil {
+        font-size: 2.2em;
+    }
+    .container {
+        margin: 15px;
+        padding: 20px;
+    }
+    .social-media-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .link-sosial {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .foto-profil {
+        width: 150px;
+        height: 150px;
+    }
+    #nama-lengkap-profil {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    .link-sosial {
+        display: block; /* Setiap link sosial di baris baru */
+        margin: 8px auto;
+        max-width: 200px;
+    }
+}
